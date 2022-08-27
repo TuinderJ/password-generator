@@ -6,8 +6,8 @@ function rng(numberOfItems) {return Math.floor(Math.random() * numberOfItems);}
 function generatePassword() {
   let password = '';
   let options = {};
-  options.length = prompt('What is the length of the password you would like?');
-  if (options.length === null || options.length == 0) {return password};
+  options.length = prompt('What is the length of the password you would like?\nIt needs to be between 8 and 128 characters long.');
+  if (options.length < 8 || options.length > 128) {return password};
   if (confirm('Would you like the password to use lowercase characters?')) {options.lowercase = true};
   if (confirm('Would you like the password to use uppercase characters?')) {options.uppercase = true};
   if (confirm('Would you like the password to use numbers?')) {options.numbers = true};
