@@ -1,9 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function rng(numberOfItems) {
-  return Math.floor(Math.random() * numberOfItems);
-}
+function rng(numberOfItems) {return Math.floor(Math.random() * numberOfItems);}
 
 function generatePassword() {
   let password = '';
@@ -24,20 +22,17 @@ function generatePassword() {
   let specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=', '_', '+'];
   
   let validOptions = [];
-  for (let key in options) {
-    validOptions.push(key)
-  }
-  console.log(validOptions);
+  for (let key in options) {if (key != 'length') {validOptions.push(key);}};
   
   for (let i = 0; i < options.length; i++) {
-    let option = validOptions[rng(validOptions.length - 1) + 1];
+    let option = validOptions[rng(validOptions.length)];
     if (option === 'lowercase') {password += characters[rng(characters.length)]};
     if (option === 'uppercase') {password += characters[rng(characters.length)].toUpperCase()};
     if (option === 'numbers') {password += rng(10)};
     if (option === 'specialCharacters') {password += specialCharacters[rng(specialCharacters.length)]};
-    console.log(password);
   }
-  return password;
+
+  return password
 }
 
 // Write password to the #password input
