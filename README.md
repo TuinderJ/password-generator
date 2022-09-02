@@ -17,6 +17,7 @@ N/A
 To use this application, click on the "Generate Password" button to initiate the prompts. You'll be asked a few criteria that you want your new password to follow. If you select acceptable criteria, a password will be provided for you.
 
 ![Screenshot](assets/images/screenshot.png)
+[Deployed Application](https://tuinderj.github.io/password-generator)
 
 ## Tests
 
